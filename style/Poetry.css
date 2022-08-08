@@ -7,8 +7,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 88px;
+    height: 75px;
     column-gap: 75%;
+}
+
+.logo img{
+    width: 70%;
 }
 
 .profile{
@@ -28,23 +32,25 @@ body{
 }
 
 .main-body{
-    background-color: #F5F5F5;
-    height: 400px;
+    background-color: #EFEDEA;
+    height: 800px;
+    display: flex;
 }
 
 .side-bar{
     width: 19%;
     height: 100%;
     background-color: #252525;
+    display: flex;
+    flex-direction: column;
 }
 
 .menu-button{
-    margin: 0;
+    margin-top: 35px;
     display: flex;
     flex-direction: column;
-    position: relative;
-    top: 20%;
-}
+    /* position: relative; */
+} 
 
 .menu-button button{
     height: 45px;
@@ -53,7 +59,109 @@ body{
     color: white;
 }
 
+.nav-btn{
+    margin-top: 200px;
+    font-size: small;
+    height: auto;
+    /* background-color: #34C759; */
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-btn ul{
+    padding: 0%;
+}
+
+.nav-btn li{
+    list-style: none;
+    margin: 30px;
+}
+
 .menu-button button:hover{
     background-color: aquamarine;
     color: black;
+}
+
+.form-body{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.form-body-title h2{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.form-body-title p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.form-poetry label{
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    font-size: 0.8rem;
+    /* left: 10px; */
+}
+
+.inp-tx{
+    background-color: white;
+	border: none;
+	padding: 10px 13px;
+	margin: 2px 0;
+	width: 60%;
+    border-radius: 8px;
+}
+
+.up-btn{
+    margin-top: 25px;
+    width: 63%;
+    height: 38px;
+    border: none;
+    background-color: #DF7861;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+}
+
+.up-btn:hover{
+    background-color: #34C759;
+}
+
+.footer{
+    height: 250px;
+    background-color: black;
+}
+
+.sos-med{
+    display: flex;
+    justify-content: center;
+    padding-top: 38px;
+}
+
+.logo-plcholder{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 100px;
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: small;
 }
