@@ -2,7 +2,8 @@
 
 ### progress [development] status :
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0aec1996-8d19-44b2-a064-5bacf7b12cbe/deploy-status)](https://app.netlify.com/sites/tedx22-dev/deploys)
-remote hosting branch master on netlify [to see web development progress]
+<br>
+remote hosting branch master on netlify [to see web development progress] <br>
 access link = [https://tedx22-dev.netlify.com/](https://tedx22-dev.netlify.com/)
 
 
