@@ -79,18 +79,6 @@ add this script after calling jquery `[is used to improve web performance relate
   </script>
 ```
 
-This will create the dillinger image and pull in the necessary dependencies.
-Be sure to swap out `${package.json.version}` with the actual
-version of Dillinger.
-
-Once done, run the Docker image and map the port to whatever you wish on
-your host. In this example, we simply map port 8000 of the host to
-port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
-
-```sh
-docker run -d -p 8000:8080 --restart=always --cap-add=SYS_ADMIN --name=dillinger <youruser>/dillinger:${package.json.version}
-```
-
 > Note: always use `loading="lazy"` and `alt="your desc"` in `<iframe>` and `<img>` to increase wevsite SEO.
 it's optional to use specify width and height in img tag
 
