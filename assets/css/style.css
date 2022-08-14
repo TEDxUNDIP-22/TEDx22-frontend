@@ -1443,6 +1443,12 @@ section {
   margin-bottom: 30px;
 }
 
+#hero h2>span>a:hover,
+#footer .footer-top .footer-links a:hover,
+#footer .credits a:hover {
+  text-decoration: underline;
+}
+
 #footer .footer-top .footer-links ul {
   list-style: none;
   padding: 0;
