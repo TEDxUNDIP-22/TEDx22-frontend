@@ -591,9 +591,14 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 @media (max-width: 575px) {
-  .navbar-mobile .login-btn {
+
+  .navbar-mobile .login-btn,
+  .navbar-mobile .usr-nav {
     width: 50%;
     margin-top: 60px;
+  }
+
+  .navbar-mobile .login-btn {
     padding: 3px 55px 3px 45px;
   }
 }
@@ -603,6 +608,11 @@ html::-webkit-scrollbar-thumb:active {
     width: 90%;
     margin: 50px auto;
     padding: 3px 55px 3px 45px;
+  }
+
+  .navbar-mobile .usr-nav {
+    width: 40%;
+    margin-top: 55px;
   }
 }
 
