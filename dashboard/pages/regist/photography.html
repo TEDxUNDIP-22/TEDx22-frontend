@@ -97,12 +97,20 @@
                     <span class="nav-link">Navigation</span>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="../../dashboard.html">
+                    <a class="nav-link" href="../../dashboard.html" aria-expanded="false" aria-controls="usr-profilez">
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
                         </span>
                         <span class="menu-title">Dashboard</span>
                     </a>
+                    <div class="collapse d-none" id="usr-profilez">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="../../dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./user-profile.html">Edit
+                                    Profile</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
@@ -143,6 +151,14 @@
                             <li class="nav-item"> <a class="nav-link" href="../merchant/merchant.html">Merch</a></li>
                         </ul>
                     </div>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="../announcement/result.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-table-large"></i>
+                        </span>
+                        <span class="menu-title">Announcements</span>
+                    </a>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-toggle="collapse" href="#admin" aria-expanded="false"
@@ -218,7 +234,7 @@
                     <ul class="navbar-nav navbar-nav-right">
                         <li class="nav-item dropdown d-none d-lg-block">
                             <a class="nav-link btn btn-success create-new-button" id="createbuttonDropdown"
-                                aria-expanded="false" href="../index.html" target="_blank">Go To
+                                aria-expanded="false" href="../../../index.html" target="_blank">Go To
                                 Homepage</a>
                         </li>
                         <li class="nav-item nav-settings d-none d-lg-block">
@@ -238,7 +254,7 @@
                                 aria-labelledby="notificationDropdown">
                                 <h6 class="p-3 mb-0">Notifications</h6>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item preview-item">
+                                <a href="../announcement/result.html" class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
                                         <div class="preview-icon bg-dark rounded-circle">
                                             <i class="mdi mdi-calendar text-success"></i>
@@ -268,9 +284,20 @@
                                 aria-labelledby="profileDropdown">
                                 <h6 class="p-3 mb-0">Profile</h6>
                                 <div class="dropdown-divider"></div>
+                                <a href="../regist/user-profile.html" class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon">
+                                            <i class="mdi mdi-account-check text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Edit Profile</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
                                 <a href="#" class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
+                                        <div class="preview-icon ">
                                             <i class="mdi mdi-logout text-danger"></i>
                                         </div>
                                     </div>
@@ -317,7 +344,8 @@
                                         Before you fill out the form below, make sure you have
                                         read and understood the contents of the Guidebook! <br />
                                         Download <span class="text-danger font-weight-bold">the Guidebook</span> :<br />
-                                        <a href="#">
+                                        <a href="https://drive.google.com/file/d/1XovCwei37D7ZPFRW_PYz5yn2ORKEQPCr/view?usp=sharing"
+                                            target="_blank">
                                             <button class="btn btn-warning mt-2" type="button"> <i
                                                     class="mdi mdi-download"></i>
                                                 Download

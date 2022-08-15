@@ -100,12 +100,20 @@
                     <span class="nav-link">Navigation</span>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="./dashboard.html">
+                    <a class="nav-link" href="./dashboard.html" aria-expanded="false" aria-controls="usr-profilez">
                         <span class="menu-icon">
                             <i class="mdi mdi-speedometer"></i>
                         </span>
                         <span class="menu-title">Dashboard</span>
                     </a>
+                    <div class="collapse d-none" id="usr-profilez">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="./pages/regist/user-profile.html">Edit
+                                    Profile</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false"
@@ -149,6 +157,14 @@
                             </li>
                         </ul>
                     </div>
+                </li>
+                <li class="nav-item menu-items">
+                    <a class="nav-link" href="./pages/announcement/result.html">
+                        <span class="menu-icon">
+                            <i class="mdi mdi-table-large"></i>
+                        </span>
+                        <span class="menu-title">Announcements</span>
+                    </a>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" data-toggle="collapse" href="#admin" aria-expanded="false"
@@ -245,7 +261,7 @@
                                 aria-labelledby="notificationDropdown">
                                 <h6 class="p-3 mb-0">Notifications</h6>
                                 <div class="dropdown-divider"></div>
-                                <a href="#" class="dropdown-item preview-item">
+                                <a href="./pages/announcement/result.html" class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
                                         <div class="preview-icon bg-dark rounded-circle">
                                             <i class="mdi mdi-calendar text-success"></i>
@@ -274,9 +290,20 @@
                                 aria-labelledby="profileDropdown">
                                 <h6 class="p-3 mb-0">Profile</h6>
                                 <div class="dropdown-divider"></div>
+                                <a href="./pages/regist/user-profile.html" class="dropdown-item preview-item">
+                                    <div class="preview-thumbnail">
+                                        <div class="preview-icon">
+                                            <i class="mdi mdi-account-check text-success"></i>
+                                        </div>
+                                    </div>
+                                    <div class="preview-item-content">
+                                        <p class="preview-subject mb-1">Edit Profile</p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-divider"></div>
                                 <a href="#" class="dropdown-item preview-item">
                                     <div class="preview-thumbnail">
-                                        <div class="preview-icon bg-dark rounded-circle">
+                                        <div class="preview-icon ">
                                             <i class="mdi mdi-logout text-danger"></i>
                                         </div>
                                     </div>
@@ -310,14 +337,14 @@
                                         </div>
                                         <div class="col-5 col-sm-7 col-xl-8 p-0">
                                             <h4 class="mb-1 mb-sm-0">Competitions Event will start soon!</h4>
-                                            <p class="mb-0 font-weight-normal d-none d-sm-block">Complete your bio and
-                                                documents now to participate!</p>
+                                            <p class="mb-0 font-weight-normal d-none d-sm-block">Complete your profile
+                                                informations now to participate!</p>
                                         </div>
                                         <div class="col-3 col-sm-2 col-xl-2 pl-0 text-center">
                                             <span>
                                                 <a href="#"
-                                                    class="btn btn-outline-light btn-rounded get-started-btn">Fill
-                                                    Registration Form</a>
+                                                    class="btn btn-outline-light btn-rounded get-started-btn">Update
+                                                    Profile Here</a>
                                             </span>
                                         </div>
                                     </div>
@@ -339,8 +366,8 @@
                                         education
                                         program, and in a few moments you can do the same for Indonesia to surface 2030
                                         era.</p>
-                                    <div class="table-responsive"><a href="#"><button type="button"
-                                                class="btn btn-primary btn-fw"> Let's
+                                    <div class="table-responsive"><a href="./pages/regist/poetry.html"><button
+                                                type="button" class="btn btn-primary btn-fw"> Let's
                                                 Rock</button></a>
                                     </div>
                                 </div>
@@ -399,7 +426,7 @@
                                     <div class="row">
                                         <div class="col-8 col-sm-12 col-xl-8 my-auto">
                                             <div class="d-flex d-sm-block d-md-flex align-items-center">
-                                                <h3 class="text-success mb-0">Approve</h3>
+                                                <h3 class="text-warning mb-0">Waiting for Approval</h3>
                                             </div>
                                             <br>
                                             <div class="d-flex d-sm-block d-md-flex align-items-center">
