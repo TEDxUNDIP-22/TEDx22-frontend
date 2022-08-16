@@ -68,14 +68,24 @@
                         <div class="card-body px-lg-5 py-lg-5">
                             <a href="../../index.html">&lt; Back to Homepage</a>
                             <h3 class="card-title text-left mt-1 mb-3">Login</h3>
-                            <form>
+                            <form class="needs-validation" novalidate>
                                 <div class="form-group">
                                     <label>Username or email *</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input type="text" class="form-control p_input" required>
+                                    <div class="invalid-feedback"><i class='bx bx-info-circle'></i>Please fill with
+                                        correct email or username.</div>
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input type="password" class="form-control p_input">
+                                    <input type="password" id="pasShow" class="form-control p_input" required>
+                                    <div class="invalid-feedback"><i class='bx bx-info-circle'></i>Please fill with
+                                        correct password.</div>
+                                </div>
+                                <div class="form-check" style="margin-bottom:-5px ;">
+                                    <label class="form-check-label text-left">
+                                        <input type="checkbox" class="form-check-input" onclick="passShow()" />
+                                        Show password
+                                    </label>
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <div class="form-check">
@@ -85,7 +95,18 @@
                                     <a href="./reset-password.html" class="forgot-pass">Forgot password</a>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
+                                    <button type="button" onclick="validateForm()"
+                                        class="btn btn-primary btn-block enter-btn">Login</button>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary btn-block enter-btn"><i
+                                            class="bx bxl-google"></i>Login With
+                                        Google</button>
+                                </div>
+                                <div class="text-center">
+                                    <button type="button" class="btn btn-primary btn-block enter-btn"><i
+                                            class="bx bxl-facebook"></i>Login With
+                                        Facebook</button>
                                 </div>
                                 <p class="sign-up">Don't have an Account?<a href="./register.html"> Sign Up</a></p>
                             </form>
@@ -132,6 +153,33 @@
     <script defer src="../../../assets/js/misc.js"></script>
     <script defer src="../../../assets/js/settings.js"></script>
     <script defer src="../../../assets/js/todolist.js"></script>
+    <script>
+        async function validateForm(params) {
+            let isValid = true
+            console.log('isValid ', isValid)
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = await Array.prototype.filter.call(forms, async function (form) {
+                console.log('validation ', form.checkValidity())
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                } else {
+                    await handleLogin()
+                }
+            });
+        }
+        async function handleLogin() {
+            //handle login
+        }
+
+        function passShow() {
+            let x = document.getElementById("pasShow");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
     <!-- endinject -->
 </body>
 

@@ -23183,6 +23183,7 @@ code {
 }
 
 /*social buttons*/
+
 .btn-twitter {
   background: #2caae1;
   color: #252525;
@@ -29471,7 +29472,7 @@ div.tagsinput span.tag a {
 
 .auth button.enter-btn {
   height: 45px;
-  margin-bottom: 28px;
+  margin-bottom: 8px;
   border-radius: 20px;
 }
 

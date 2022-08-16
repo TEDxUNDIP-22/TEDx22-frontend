@@ -44,7 +44,7 @@
 
 <body style="background: #F6F9FC;">
     <!-- your code here -->
-    <header id="header" class="rgs">
+    <header id="header">
         <div class="header-top">
             <div class="container justify-content-between">
                 <div class="row ">
@@ -68,30 +68,51 @@
                         <div class="card-body px-lg-5 py-lg-5">
                             <a href="../../index.html">&lt; Back to Homepage</a>
                             <h3 class="card-title text-left mt-1 mb-3">Register</h3>
-                            <form>
+                            <form class="needs-validation" novalidate>
                                 <div class="form-group">
                                     <label>Username *</label>
-                                    <input type="text" class="form-control p_input">
-                                </div>
-                                <div class="form-group">
-                                    <label>Fullname *</label>
-                                    <input type="text" class="form-control p_input">
-                                </div>
-                                <div class="form-group">
-                                    <label>Institution *</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input type="text" class="form-control p_input" required>
+                                    <div class="invalid-feedback"><i class='bx bx-info-circle'></i>Please fill with
+                                        correct username.</div>
                                 </div>
                                 <div class="form-group">
                                     <label>Email *</label>
-                                    <input type="email" class="form-control p_input">
+                                    <input type="email" class="form-control p_input"
+                                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" required>
+                                    <div class="invalid-feedback"><i class='bx bx-info-circle'></i>Please fill with
+                                        correct email.</div>
                                 </div>
                                 <div class="form-group">
                                     <label>Password *</label>
-                                    <input type="password" class="form-control p_input">
+                                    <input type="password" class="form-control p_input pasShow" id="validationPassword"
+                                        required>
+                                    <div class="progress mt-2" style="height: 5px;">
+                                        <div id="progressbar"
+                                            class="progress-bar progress-bar-striped progress-bar-animated"
+                                            role="progressbar" style="width: 10%;" aria-valuenow="50" aria-valuemin="0"
+                                            aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <div id="feedbackin" class="valid-feedback"><i class='bx bx-info-circle'></i>
+                                        Strong Password!
+                                    </div>
+                                    <div id="feedbackirn" class="invalid-feedback"><i class='bx bx-info-circle'></i>
+                                        Password must atleast 8 characters, including
+                                        a Number, a special character, a
+                                        capital letter, and small letters
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Repeat Password *</label>
-                                    <input type="password" class="form-control p_input">
+                                    <input type="password" class="form-control p_input pasShow" required>
+                                    <div class="invalid-feedback"><i class='bx bx-info-circle'></i>Please fill with
+                                        same password as inputted.</div>
+                                </div>
+                                <div class="form-check" style="margin-bottom:-5px ;">
+                                    <label class="form-check-label text-left">
+                                        <input type="checkbox" class="form-check-input" onclick="passShow()" />
+                                        Show password
+                                    </label>
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <div class="form-check">
@@ -100,7 +121,8 @@
                                     </div>
                                 </div>
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary btn-block enter-btn">Sign Up</button>
+                                    <button type="button" onclick="validateForm()"
+                                        class="btn btn-primary btn-block enter-btn">Sign Up</button>
                                 </div>
                                 <p class="sign-up">Already have an Account?<a href="./login.html"> Sign In</a></p>
                             </form>
@@ -148,6 +170,145 @@
     <script defer src="../../../assets/js/settings.js"></script>
     <script defer src="../../../assets/js/todolist.js"></script>
     <!-- endinject -->
+    <script>
+        async function validateForm(params) {
+            let isValid = true
+            console.log('isValid ', isValid)
+            var forms = document.getElementsByClassName('needs-validation');
+            var validation = await Array.prototype.filter.call(forms, async function (form) {
+                console.log('validation ', form.checkValidity())
+                if (!form.checkValidity()) {
+                    form.classList.add('was-validated');
+                } else {
+                    await handleRegister()
+                }
+            });
+        }
+        async function handleRegister() {
+            //handle register
+        }
+
+        function passShow() {
+            let x = document.querySelectorAll('.pasShow');
+            for (let idx = 0; idx < x.length; idx++) {
+                if (x[idx].type === "password") {
+                    x[idx].type = "text";
+                } else {
+                    x[idx].type = "password";
+                }
+            }
+        }
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                var forms = document.getElementsByClassName('needs-validation');
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.validationPassword.addEventListener('keypress', function (event) {
+                        var checkx = true;
+                        var chr = String.fromCharCode(event.which);
+                        var matchedCase = new Array();
+                        matchedCase.push("[!@#$%&*_?]");
+                        matchedCase.push("[A-Z]");
+                        matchedCase.push("[0-9]");
+                        matchedCase.push("[a-z]");
+                        for (var i = 0; i < matchedCase.length; i++) {
+                            if (new RegExp(matchedCase[i]).test(chr)) {
+                                checkx = false;
+                            }
+                        }
+                        if (form.validationPassword.value.length >= 20)
+                            checkx = true;
+                        if (checkx) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                    });
+                    var matchedCase = new Array();
+                    matchedCase.push("[$@$$!%*#?&]");
+                    matchedCase.push("[A-Z]");
+                    matchedCase.push("[0-9]");
+                    matchedCase.push("[a-z]");
+                    form.validationPassword.addEventListener('keyup', function () {
+                        var messageCase = new Array();
+                        messageCase.push(" Special Charector");
+                        messageCase.push(" Upper Case");
+                        messageCase.push(" Numbers");
+                        messageCase.push(" Lower Case");
+                        var ctr = 0;
+                        var rti = "";
+                        for (var i = 0; i < matchedCase.length; i++) {
+                            if (new RegExp(matchedCase[i]).test(form.validationPassword
+                                    .value)) {
+                                if (i == 0) messageCase.splice(messageCase.indexOf(
+                                    " Special Charector"), 1);
+                                if (i == 1) messageCase.splice(messageCase.indexOf(
+                                    " Upper Case"), 1);
+                                if (i == 2) messageCase.splice(messageCase.indexOf(
+                                    " Numbers"), 1);
+                                if (i == 3) messageCase.splice(messageCase.indexOf(
+                                    " Lower Case"), 1);
+                                ctr++;
+                            }
+                        }
+                        // Display it
+                        var progressbar = 0;
+                        var strength = "";
+                        var bClass = "";
+                        switch (ctr) {
+                            case 0:
+                            case 1:
+                                strength = "Way too Weak";
+                                progressbar = 15;
+                                bClass = "bg-danger ";
+                                break;
+                            case 2:
+                                strength = "Very Weak";
+                                progressbar = 25;
+                                bClass = "bg-danger";
+                                break;
+                            case 3:
+                                strength = "Weak";
+                                progressbar = 34;
+                                bClass = "bg-warning";
+                                break;
+                            case 4:
+                                strength = "Medium";
+                                progressbar = 65;
+                                bClass = "bg-warning";
+                                break;
+                        }
+                        if (strength == "Medium" && form.validationPassword.value
+                            .length >=
+                            8) {
+                            strength = "Strong";
+                            bClass = "bg-success";
+                            form.validationPassword.setCustomValidity("");
+                        } else {
+                            form.validationPassword.setCustomValidity(strength);
+                        }
+                        var sometext = "";
+                        if (form.validationPassword.value.length < 8) {
+                            var lengthI = 8 - form.validationPassword.value.length;
+                            sometext += ` ${lengthI} more Characters, `;
+                        }
+                        sometext += messageCase;
+                        if (sometext) {
+                            sometext = " You Need" + sometext;
+                        }
+                        $("#feedbackin, #feedbackirn").text(strength + sometext);
+                        $("#progressbar").removeClass("bg-danger bg-warning bg-success")
+                            .addClass(bClass);
+                        var plength = form.validationPassword.value.length;
+                        if (plength > 0) progressbar += ((plength - 0) * 1.75);
+                        var percentage = progressbar + "%";
+                        form.validationPassword.parentNode.classList.add(
+                            'was-validated');
+                        $("#progressbar").width(percentage);
+                    });
+                });
+            }, false);
+        })();
+    </script>
 </body>
 
 </html>
