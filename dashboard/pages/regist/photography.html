@@ -388,21 +388,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputName1">Instagram Link</label>
-                                            <input type="text" class="form-control rounded-pill " id="simpleinput"
-                                                placeholder="https://instagram.com/tedxundip"
-                                                pattern="/(?:https?:\/\/)?(?:www.)?instagram.com\/?([a-zA-Z0-9\.\_\-]+)?\/([p]+)?([reel]+)?([tv]+)?([stories]+)?\/([a-zA-Z0-9\-\_\.]+)\/?([0-9]+)?/gm"
-                                                minlength="22" required />
-                                            <div class="valid-feedback">Looks good!</div>
-                                            <div class="invalid-feedback">Not a correct Instagram URL format.</div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Submit file title and description</label>
+                                            <label>Submit file title and description of your photos</label>
                                             <input type="file" name="img[]" class="file-upload-default" required />
                                             <div class="input-group col-xs-12">
                                                 <input type="text" class="form-control rounded-pill  file-upload-info"
-                                                    placeholder="Photograph_Fullname_University_Title.pdf"
-                                                    pattern="([a-zA-Z0-9!@#$%^&*()`~_+\-=\[\]{};':\\|,.<>\/?\s_\\.\-:])+(.png|.jpg|.jpeg)$"
+                                                    placeholder="Photograph_Fullname_University_Title(.pdf/.doc/.docx)"
+                                                    pattern="([a-zA-Z0-9!@#$%^&*()`~_+\-=\[\]{};':\\|,.<>\/?\s_\\.\-:])+(.pdf|.doc|.docx)$"
                                                     required />
                                                 <span class="input-group-append">
                                                     <button class="file-upload-browse btn btn-primary rounded-pill ms-2"
@@ -412,18 +403,18 @@
                                                 </span>
                                                 <div class="valid-feedback">Looks good!</div>
                                                 <div class="invalid-feedback">
-                                                    Fill with correct type (*png/jpg/jpeg)
+                                                    Fill with correct type (*pdf/doc/docx)
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <div class="form-row mb-3">
-                                                <label>Submit file photograph</label>
+                                                <label>Submit your photos</label>
                                                 <input type="file" name="img[]" class="file-upload-default" required />
                                                 <div class="input-group col-xs-12">
                                                     <input type="text"
                                                         class="form-control rounded-pill  file-upload-info"
-                                                        placeholder="Photograph_Fullname_University_Title.pdf"
+                                                        placeholder="Photograph_Fullname_University_Title(.png/.jpg/.jpeg)"
                                                         pattern="([a-zA-Z0-9!@#$%^&*()`~_+\-=\[\]{};':\\|,.<>\/?\s_\\.\-:])+(.png|.jpg|.jpeg)$"
                                                         required />
                                                     <span class="input-group-append">
@@ -439,35 +430,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="form-row mb-3">
-                                                <label>Submit KTM</label>
-                                                <input type="file" name="img[]" class="file-upload-default" required />
-                                                <div class="input-group col-xs-12">
-                                                    <input type="text"
-                                                        class="form-control rounded-pill  file-upload-info"
-                                                        placeholder="Your KTM here"
-                                                        pattern="([a-zA-Z0-9!@#$%^&*()`~_+\-=\[\]{};':\\|,.<>\/?\s_\\.\-:])+(.pdf|.doc|.docx)$"
-                                                        required />
-                                                    <span class="input-group-append">
-                                                        <button
-                                                            class="file-upload-browse btn btn-primary rounded-pill ms-2"
-                                                            type="button">
-                                                            Upload
-                                                        </button>
-                                                    </span>
-                                                    <div class="valid-feedback">Looks good!</div>
-                                                    <div class="invalid-feedback">
-                                                        Fill with correct type (*Pdf/Doc/Docx)
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="form-group">
                                             <p class="text-info"><i class="mdi mdi-information-outline"></i> all max
                                                 file
                                                 size is up to 10MB <br>
                                                 <i class="mdi mdi-information-outline"></i>
-                                                photograph file name must be same with description <br>
+                                                photograph file name must be same with description file name<br>
                                                 <i class="mdi mdi-information-outline"></i>
                                                 The submitted photo must have description and there must be a
                                                 relation between your photos and the description
