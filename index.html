@@ -45,91 +45,12 @@
 </head>
 
 <body>
-  <!-- ======= Top Bar ======= -->
-  <div id="topbar" class="d-flex align-items-center fixed-top">
-    <div class="container d-flex justify-content-center justify-content-md-between">
-      <div class="contact-info d-flex align-items-center">
-      </div>
-      <div class="languages d-none d-md-flex align-items-center">
-        <ul>
-          <li>En</li>
-          <li><a href="#">Id</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-evenly">
-      <a href="./index.html" class="logo me-auto me-lg-0"><img src="./assets/img/logo.png" alt="logo-header"
-          class="img-fluid" height="39.9" width="161.6"></a>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul id="navigation">
-          <li><a class="nav-link active" href="./index.html">Home</a></li>
-          <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down text-danger fw-bold"></i></a>
-            <ul>
-              <li><a href="#">TEDx UNDIP Journey</a></li>
-              <li><a href="#">Grand Theme</a></li>
-              <li><a href="#">Meet the Team</a></li>
-              <li><a href="#">Sponsorships</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Events</span> <i
-                class="bi bi-chevron-down text-danger fw-bold"></i></a>
-            <ul>
-              <li><a href="#">Main Event</a></li>
-              <li><a href="#">Pre Events</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Competitions</span> <i
-                class="bi bi-chevron-down text-danger fw-bold"></i></a>
-            <ul>
-              <li><a href="./public/competition/poetry.html">Poetry</a></li>
-              <li><a href="./public/competition/photography.html">Photography</a></li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Order Now</span> <i
-                class="bi bi-chevron-down text-danger fw-bold"></i></a>
-            <ul>
-              <li><a href="#">Tickets</a></li>
-              <li><a href="#">Merch</a></li>
-              <li><a href="./dashboard/pages/faq/faq.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="btn-lef" style="margin-left: 150px;">
-            <a href="https://www.twitter.com/tedxundip/" target="_blank" class="scm-header"><i
-                class="bx bxl-twitter fs-6"></i></a>
-          </li>
-          <li class="btn-lef">
-            <a href="https://www.linkedin.com/company/tedxundip/" target="_blank" class="scm-header"><i
-                class="bx bxl-linkedin fs-6"></i></a>
-          </li>
-          <li class="btn-lef">
-            <a href="https://www.instagram.com/tedxundip/" target="_blank" class="scm-header"><i
-                class="bx bxl-instagram fs-6"></i></a>
-          </li>
-          <!-- if user DONT have account -->
-          <li><a class="login-btn" href="./dashboard/auth/login.html"><i class="bx bx-user me-2 fs-6"></i>Login</a></li>
-
-          <!-- if user have account -->
-          <!-- <li class="usr-nav nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="dropdown_user" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bx bx-user me-2 fs-6"></i>Abyan
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdown_user">
-              <li><a class="dropdown-item" href="#">Dashboard</a></li>
-              <li><a class="dropdown-item" href="#">Change Password</a></li>
-              <li><a class="dropdown-item" href="#">Logout</a></li>
-            </ul>
-          </li> -->
-        </ul> <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
+  <nav-bar></nav-bar>
 
   <!-- ======= Hero Section ======= -->
+
   <section id="hero" class="d-flex align-items-center">
     <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
       <div class="row">
@@ -165,28 +86,27 @@
         <div class="col-lg-4">
           <h1 class="text-center fw-bold">Main Event</h1>
           <h6 class="fs-lg-5 fs-sm-6 text-center fw-lighter">COMING SOON!</h6>
-          <h5 class="fs-lg-5 fs-sm-6  mt-3"><span class="fw-bold" style="color: red;">P.S. </span>The main event will be held
-            offline. <br /> You'll
-            be sure to
-            get new and refreshing experience on-site.</h5>
-          <!-- <h2 class="fs-lg-5 fs-sm-6">Our main event will be held on <span class="fw-bold">23 Nov 2022</span> at
+          <h2 class="fs-lg-5 fs-sm-6">Our main event will be held on <span class="fw-bold">18 Dec 2022</span> at
             <span class="fw-bold"><a href="#contact">Radjawali SCC </a>
             </span>after all finals are
             finished. You'll
             be sure to
-            get new and refreshing experience on-site</h2> -->
+            get new and refreshing experience on-site
+          </h2>
           <!-- <div class="btns">
             <a href="#about" class="btn-menu animated fadeInUp scrollto">Discover</a>
           </div> -->
         </div>
       </div>
     </div>
-  </section><!-- End Hero -->
+  </section>
+
+  <!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= About Section ======= -->
-    <section id="about" class="about home-comp">
+    <!-- <section id="about" class="about home-comp">
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
@@ -197,7 +117,7 @@
           <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
             <div class="section-title">
               <h2>TEDxUNDIP 3.0</h2>
-              <p>The Art of an Extraordinary Eras</p>
+              <p>The Art of an Extraordinary Era's</p>
             </div>
             <p class="fst-italic">
               This year’s mission is to give something fresh, wild, and out-of-the box through eye-opening storytelling.
@@ -217,10 +137,11 @@
         </div>
 
       </div>
-    </section><!-- End About Section -->
+    </section> -->
+    <!-- End About Section -->
 
     <!-- ======= Specials Section ======= -->
-    <section id="specials" class="specials">
+    <!-- <section id="specials" class="specials">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -297,7 +218,8 @@
           </div>
         </div>
       </div>
-    </section><!-- End Specials Section -->
+    </section> -->
+    <!-- End Specials Section -->
 
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials section-bg">
@@ -468,7 +390,7 @@
     </section><!-- End Gallery Section -->
 
     <!-- ======= Contact Section ======= -->
-    <!-- <section id="contact" class="contact">
+    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>TEDxUNDIP 3.0</h2>
@@ -480,76 +402,25 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.2600396210682!2d110.41041911477316!3d-6.978613394958527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708bb9425c154b%3A0xaf97e964a8e56733!2sRadjawali%20Semarang%20Cultural%20Center!5e0!3m2!1sid!2sid!4v1660517508027!5m2!1sid!2sid&display=swap"
           frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </section>End Contact Section -->
-  </main><!-- End #main -->
+    </section>
+    <!-- End Contact Section -->
+  </main>
+
+  <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <img src="./assets/img/logo_footer.png" height="60px" alt="logo-footer" height="60" width="242">
-              <p>TEDx is an independently organized TED event which helps communities enjoy a TED
-                like experience,
-                through live speakers and videos of TED talks. Extensively conducted by leading universities and
-                organizations, TEDx events have seen incredible growth across the globe.</p>
-            </div>
-          </div>
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Events</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="./dashboard/pages/regist/poetry.html">Competitions</a>
-              </li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Order Now</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Contacts</h4>
-            <p>
-              Diponegoro University,
-              Kota Semarang, Jawa Tengah 50275
-              <br>
-              Indonesia<br>
-              <strong>Phone:</strong> +91 78092 19566<br>
-              <strong>Email:</strong> <a
-                href="mailto:tedxundip3.0@gmail.com@gmail.com?subject=[[Your Subject]]&body=Email Using Body"
-                target="_blank">tedxundip3.0@gmail.com</a><br>
-            </p>
-          </div>
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Check Our Social Medias</h4>
-            <p>Get the latest information updates from our official account!</p>
-            <div class="social-links mt-3">
-              <a href="https://www.twitter.com/tedxundip/" target="_blank" class="twitter"><i
-                  class="bx bxl-twitter"></i></a>
-              <a href="https://www.instagram.com/tedxundip/" target="_blank" class="instagram"><i
-                  class="bx bxl-instagram"></i></a>
-              <a href="https://www.linkedin.com/company/tedxundip/" target="_blank" class="linkedin"><i
-                  class="bx bxl-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="copyright">
-        &copy;2022 All Rights Reserved. <strong><span style="color: #E62B1E">TEDx</span></strong> event is
-        operated under license from <strong><span style="color: #E62B1E">TED</span></strong>
-      </div>
-      <div class="credits">
-        Designed by <a href="#"> Website Development TEDx UNDIP</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+
+  <custom-footer></custom-footer>
+  
+  <!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Reuse Element JS -->
+  <script src="./public/reuse/navbar.js"></script>
+  <script src="./public/reuse/footer.js"></script>
 
   <!-- Vendor JS Files -->
   <script src="./assets/vendor/aos/aos.js"></script>
