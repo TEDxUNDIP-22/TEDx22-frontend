@@ -8,23 +8,23 @@ class Navbar extends HTMLElement {
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul id="navigation">
                         <li><a class="nav-link" href="../../index.html">Home</a></li>
-                        <li class="dropdown"><a class="active" href="#"><span>About</span> <i
+                        <li class="dropdown"><a href="#"><span>About</span> <i
                                     class="bi bi-chevron-down text-danger fw-bold"></i></a>
                             <ul>
-                                <li><a href="../about/about.html">TEDx UNDIP Journey</a></li>
-                                <li><a href="../about/grand-theme.html">Grand Theme</a></li>
-                                <li><a href="../about/meet-the-team.html">Meet the Team</a></li>
-                                <li><a href="../about/sponsorship.html">Sponsorships</a></li>
+                                <li><a href="/public/about/about.html">TEDx UNDIP Journey</a></li>
+                                <li><a href="/public/about/grand-theme.html">Grand Theme</a></li>
+                                <li><a href="/public/about/meet-the-team.html">Meet the Team</a></li>
+                                <li><a href="/public/about/sponsorship.html">Sponsorships</a></li>
                             </ul>
                         </li>
                         <li class="dropdown"><a href="#"><span>Events</span> <i
                                     class="bi bi-chevron-down text-danger fw-bold"></i></a>
                             <ul>
-                                <li><a href="../main-event/main-event.html">Main Event</a></li>
-                                <li><a href="../pre-event/pre-event.html">Pre Events</a></li>
+                                <li><a href="/public/main-event/main-event.html">Main Event</a></li>
+                                <li><a href="/public/pre-event/pre-event.html">Pre Events</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown"><a href="#"><span>Order Now</span> <i
+                        <li class="dropdown"><a class="active" href="#"><span>Order Now</span> <i
                                     class="bi bi-chevron-down text-danger fw-bold"></i></a>
                             <ul>
                                 <li><a href="#">Tickets</a></li>
