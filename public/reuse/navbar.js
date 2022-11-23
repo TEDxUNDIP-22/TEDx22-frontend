@@ -1,7 +1,7 @@
 class Navbar extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML =
-            `  <header id="header" class="fixed-top d-flex align-items-center">
+  connectedCallback() {
+    this.innerHTML =
+      `  <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-evenly">
           <a href="./index.html" class="logo me-auto me-lg-0"><img src="./assets/img/logo.png" alt="logo-header"
               class="img-fluid" height="39.9" width="161.6"></a>
@@ -10,23 +10,17 @@ class Navbar extends HTMLElement {
               <li><a class="nav-link active" href="./index.html">Home</a></li>
               <li class="dropdown"><a href="#"><span>About</span> <i class="bi bi-chevron-down text-danger fw-bold"></i></a>
                 <ul>
-                  <li><a href="./public/about/about.html">TEDx UNDIP Journey</a></li>
+                  <li><a href="./public/about/about.html">TEDxUNDIP Journey</a></li>
                   <li><a href="./public/about/grand-theme.html">Grand Theme</a></li>
                   <li><a href="./public/about/meet-the-team.html">Meet the Team</a></li>
                   <li><a href="./public/about/sponsorship.html">Sponsorships</a></li>
                 </ul>
               </li>
-              <li class="dropdown"><a href="#"><span>Events</span> <i
-                    class="bi bi-chevron-down text-danger fw-bold"></i></a>
-                <ul>
-                  <li><a href="./public/main-event/main-event.html">Main Event</a></li>
-                  <li><a href="./public/pre-event/pre-event.html">Pre Events</a></li>
-                </ul>
-              </li>
+              <li><a class="nav-link" href="./public/main-event/main-event.html">Main Events</a></li>
               <li class="dropdown"><a href="#"><span>Order Now</span> <i
                     class="bi bi-chevron-down text-danger fw-bold"></i></a>
                 <ul>
-                  <li><a href="#">Tickets</a></li>
+                  <li><a href="https://ticket.tedxundip.org">Tickets</a></li>
                   <li><a href="#">FAQ</a></li>
                 </ul>
               </li>
@@ -46,7 +40,7 @@ class Navbar extends HTMLElement {
           </nav><!-- .navbar -->
         </div>
       </header><!-- End Header -->`
-    }
+  }
 }
 
 customElements.define('nav-bar', Navbar);

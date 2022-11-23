@@ -61,6 +61,22 @@ h6 {
   color: #E62B1E;
 }
 
+.buy-now .btn-buy-now {
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+  z-index: 999999;
+  box-shadow: 0 1px 20px 1px #E62B1E;
+}
+
+.buy-now .btn-buy-now:hover {
+  box-shadow: none;
+}
+
+#tickets .buy-ticket:hover .linktiket {
+  color: whitesmoke;
+}
+
 /* responsive breakpoint yg digunakan (menyesuaikan kebutuhan) */
 @media only screen and (min-width: 1400px) {}
 
@@ -185,6 +201,7 @@ html::-webkit-scrollbar-thumb:active {
   visibility: visible;
   opacity: 1;
 }
+
 
 /*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
@@ -878,7 +895,7 @@ section {
 }
 
 .section-bg {
-  background-color: #1a1814;
+  /* background-color: #1a1814; */
 }
 
 .section-title {
@@ -913,6 +930,22 @@ section {
   font-weight: 700;
   font-family: "fivo-sans", sans-serif;
   color: #E62B1E;
+}
+
+.discussion {
+  background-color: #1a1814;
+}
+
+.img-discussion {
+  /* make center  */
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.desc-discussion {
+  /* make center  */
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -1469,6 +1502,32 @@ section {
 #timeline {
   background: #1A1814;
 }
+
+/*--------------------------------------------------------------
+# Event Section 
+--------------------------------------------------------------*/
+#event {
+  background: #1A1814;
+}
+
+/*--------------------------------------------------------------
+# Event Section 
+--------------------------------------------------------------*/
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 /*--------------------------------------------------------------
 # Footer

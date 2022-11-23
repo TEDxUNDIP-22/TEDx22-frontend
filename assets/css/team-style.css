@@ -112,7 +112,6 @@ h6 {
     border-bottom: 3px solid #3f51b515;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    /* ! font-family: ; */
 }
 
 .utama .col-lg-4 p,
@@ -197,6 +196,67 @@ h6 {
 .kedua .glide__slide.glide__slide--active {
     transform: scale(1);
     filter: brightness(100%);
+}
+
+@media (max-width: 574px) {
+    .utama {
+        margin-top: -90px;
+        margin-left: 13px;
+    }
+
+    .utama img,
+    .kedua img {
+        width: 100%;
+        height: 300px;
+        object-fit: fill;
+
+    }
+
+    .utama .col-lg-4,
+    .kedua .col-lg-4 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .utama .col-lg-8,
+    .kedua .col-lh-8 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .utama .col-lg-4 h1,
+    .kedua .col-lg-4 h1 {
+        font-size: 50px;
+    }
+
+    .utama .col-lg-4 a,
+    .kedua .col-lg-4 a {
+        display: inline-block;
+        padding: 9px 25px;
+
+        border: 2px solid crimson;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top: 10px;
+    }
+
+    /* .utama .glide__arrows .glide__arrow,
+    .kedua .glide__arrows .glide__arrow {
+        width: 32px;
+        height: 32px;
+        font-size: 15px;
+    } */
+
+    .utama .glide__arrows,
+    .kedua .glide__arrows {
+        position: absolute;
+        bottom: -30px;
+        /* make to the center  */
+        left: 42%;
+
+    }
 }
 
 
@@ -751,8 +811,9 @@ html::-webkit-scrollbar-thumb:active {
 #hero-team {
     width: 100%;
     height: 100vh;
-    background: url("../img/intro-team.png") top center;
+    background: url("../img/intro-team.png");
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     padding: 0;
 }
@@ -1044,562 +1105,6 @@ section {
     font-weight: 700;
     font-family: "fivo-sans", sans-serif;
     color: #E62B1E;
-}
-
-/*--------------------------------------------------------------
-  # About
-  --------------------------------------------------------------*/
-.breadcrumbs {
-    padding: 15px 0;
-    background: #1d1b16;
-    margin-top: 110px;
-}
-
-.a-comp:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 992px) {
-    .breadcrumbs {
-        margin-top: 98px;
-    }
-}
-
-.breadcrumbs h2 {
-    font-size: 26px;
-    font-weight: 300;
-}
-
-.breadcrumbs ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-}
-
-.breadcrumbs ol li+li {
-    padding-left: 10px;
-}
-
-.breadcrumbs ol li+li::before {
-    display: inline-block;
-    padding-right: 10px;
-    color: #37332a;
-    content: "/";
-}
-
-@media (max-width: 768px) {
-    .breadcrumbs .d-flex {
-        display: block !important;
-    }
-
-    .breadcrumbs ol {
-        display: block;
-    }
-
-    .breadcrumbs ol li {
-        display: inline-block;
-    }
-}
-
-
-/*--------------------------------------------------------------
-  # About
-  --------------------------------------------------------------*/
-.about {
-    position: relative;
-    padding: 80px 0;
-}
-
-.img-comp {
-    background: url("../img/competitions/intro-comp.png") center center;
-    background-size: cover;
-}
-
-.home-comp {
-    background: url("../img/about-bg.png") center center;
-    background-size: cover;
-}
-
-.about:before {
-    content: "";
-    background: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.about .about-img,
-.about .about-img-2 {
-    position: relative;
-    transition: .5s;
-}
-
-@media (max-width:991px) {
-
-    .about .about-img,
-    .about .about-img-2 {
-        text-align: center;
-    }
-}
-
-@media (min-width:768px) and (max-width:991px) {
-    #inspirational .card-body button.m-mans {
-        margin-top: 25px;
-    }
-}
-
-
-.about .about-img img {
-    max-width: 100%;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    position: relative;
-}
-
-.about .about-img-2 img {
-    max-width: 100%;
-    position: relative;
-}
-
-.about .about-img::before {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 1;
-    content: '';
-    border-left: 5px solid #E62B1E;
-    border-top: 5px solid #E62B1E;
-    transition: .5s;
-}
-
-.about .about-img::after {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    width: 60px;
-    height: 60px;
-    z-index: 2;
-    content: '';
-    border-right: 5px solid #E62B1E;
-    border-bottom: 5px solid #E62B1E;
-    transition: .5s;
-}
-
-.about .about-img:hover,
-.about .about-img-2:hover {
-    transform: scale(1.03);
-}
-
-.about .about-img:hover::before {
-    left: 10px;
-    top: 10px;
-}
-
-.about .about-img:hover::after {
-    right: 10px;
-    bottom: 10px;
-}
-
-.about .content h3 {
-    font-weight: 600;
-    font-size: 26px;
-}
-
-.about .content ul {
-    list-style: none;
-    padding: 0;
-}
-
-.about .content ul li {
-    padding-bottom: 10px;
-}
-
-.about .content ul i {
-    font-size: 20px;
-    padding-right: 4px;
-    color: #E62B1E;
-}
-
-.about .content p:last-child {
-    margin-bottom: 0;
-}
-
-@media (min-width: 1024px) {
-    .about {
-        background-attachment: fixed;
-    }
-}
-
-/*--------------------------------------------------------------
-  # Specials
-  --------------------------------------------------------------*/
-.specials {
-    overflow: hidden;
-}
-
-.specials .nav-tabs {
-    border: 0;
-}
-
-.specials .nav-link {
-    border: 0;
-    padding: 12px 15px;
-    transition: 0.3s;
-    color: #fff;
-    border-radius: 0;
-    border-right: 2px solid #E62B1E;
-    font-weight: 600;
-    font-size: 15px;
-}
-
-.specials .nav-link:hover {
-    color: #E62B1E;
-}
-
-.specials .nav-link.active {
-    color: #1a1814;
-    background: #E62B1E;
-    border-color: #E62B1E;
-}
-
-.specials .nav-link:hover {
-    border-color: #E62B1E;
-}
-
-.specials .tab-pane.active {
-    -webkit-animation: fadeIn 0.5s ease-out;
-    animation: fadeIn 0.5s ease-out;
-}
-
-.specials .details h3 {
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.specials .details p {
-    color: #aaaaaa;
-}
-
-.specials .details p:last-child {
-    margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-    .specials .nav-link {
-        border: 0;
-        padding: 15px;
-    }
-}
-
-/*--------------------------------------------------------------
-  # Testimonials
-  --------------------------------------------------------------*/
-.testimonials .testimonial-item {
-    box-sizing: content-box;
-    min-height: 320px;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-    width: 90px;
-    border-radius: 50%;
-    margin: -40px 0 0 40px;
-    position: relative;
-    z-index: 2;
-    border: 6px solid rgba(255, 255, 255, 0.2);
-}
-
-.testimonials .testimonial-item h3 {
-    font-size: 18px;
-    font-weight: bold;
-    margin: 10px 0 5px 45px;
-    color: white;
-}
-
-.testimonials .testimonial-item h4 {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-    margin: 0 0 0 45px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-    color: #d3af71;
-    font-size: 26px;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-    display: inline-block;
-    left: -5px;
-    position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-}
-
-.testimonials .testimonial-item p {
-    font-style: italic;
-    margin: 0 15px 0 15px;
-    padding: 20px 20px 60px 20px;
-    background: #26231d;
-    position: relative;
-    border-radius: 6px;
-    position: relative;
-    z-index: 1;
-}
-
-.testimonials .swiper-pagination {
-    margin-top: 30px;
-    position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background-color: rgba(255, 255, 255, 0.4);
-    opacity: 1;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #E62B1E;
-}
-
-/*--------------------------------------------------------------
-  # Gallery
-  --------------------------------------------------------------*/
-.gallery .gallery-item {
-    overflow: hidden;
-    border-right: 3px solid #454035;
-    border-bottom: 3px solid #454035;
-}
-
-.gallery .gallery-item img {
-    transition: all ease-in-out 0.4s;
-}
-
-.gallery .gallery-item:hover img {
-    transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-  # Contact
-  --------------------------------------------------------------*/
-.contact .info {
-    width: 100%;
-}
-
-.contact .info i {
-    font-size: 20px;
-    float: left;
-    width: 44px;
-    height: 44px;
-    background: #E62B1E;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px;
-    transition: all 0.3s ease-in-out;
-}
-
-.contact .info h4 {
-    padding: 0 0 0 60px;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 5px;
-    font-family: "fivo-sans", sans-serif;
-}
-
-.contact .info p {
-    padding: 0 0 0 60px;
-    margin-bottom: 0;
-    font-size: 14px;
-    color: #bab3a6;
-}
-
-.contact .info .open-hours,
-.contact .info .email,
-.contact .info .phone {
-    margin-top: 40px;
-}
-
-.contact .php-email-form {
-    width: 100%;
-}
-
-.contact .php-email-form .form-group {
-    padding-bottom: 8px;
-}
-
-.contact .php-email-form .validate {
-    display: none;
-    color: red;
-    margin: 0 0 15px 0;
-    font-weight: 400;
-    font-size: 13px;
-}
-
-.contact .php-email-form .error-message {
-    display: none;
-    color: #fff;
-    background: #ed3c0d;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.contact .php-email-form .sent-message {
-    display: none;
-    color: #fff;
-    background: #18d26e;
-    text-align: center;
-    padding: 15px;
-    font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-    display: none;
-    text-align: center;
-    padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px -6px 0;
-    border: 3px solid #E62B1E;
-    border-top-color: #1a1814;
-    -webkit-animation: animate-loading 1s linear infinite;
-    animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-    border-radius: 0;
-    box-shadow: none;
-    font-size: 14px;
-    background: #0c0b09;
-    border-color: #625b4b;
-    color: white;
-}
-
-.contact .php-email-form input::-webkit-input-placeholder,
-.contact .php-email-form textarea::-webkit-input-placeholder {
-    color: #a49b89;
-}
-
-.contact .php-email-form input::-moz-placeholder,
-.contact .php-email-form textarea::-moz-placeholder {
-    color: #a49b89;
-}
-
-.contact .php-email-form input::placeholder,
-.contact .php-email-form textarea::placeholder {
-    color: #a49b89;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-    border-color: #E62B1E;
-}
-
-.contact .php-email-form input {
-    height: 44px;
-}
-
-.contact .php-email-form textarea {
-    padding: 10px 12px;
-}
-
-.contact .php-email-form button[type="submit"] {
-    background: #E62B1E;
-    border: 0;
-    padding: 10px 35px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 50px;
-}
-
-.contact .php-email-form button[type="submit"]:hover {
-    background: #d3af71;
-}
-
-@-webkit-keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/*--------------------------------------------------------------
-  # Lomba Kuy Section 
-  --------------------------------------------------------------*/
-#lomba-kuy {
-    background: url(../img/competitions/bg-kuy.png) center center;
-    background-size: cover;
-}
-
-@media (max-width: 576px) {
-    #lomba-kuy {
-        background: #1A1814
-    }
-}
-
-@media (max-width: 992px) {
-    #lomba-kuy {
-        background-position-x: 55rem;
-    }
-}
-
-#lomba-kuy button,
-#inspirational button {
-    background: #E62B1E;
-    padding: 10px 40px;
-    border-radius: 10px;
-    border: none;
-    transition: 0.3s;
-}
-
-#lomba-kuy button:hover {
-    background: #ad2016;
-}
-
-#inspirational button:hover {
-    background: #ad2016;
-    scale: 1.1;
-}
-
-/*--------------------------------------------------------------
-  # Timeline Section 
-  --------------------------------------------------------------*/
-#timeline {
-    background: #1A1814;
 }
 
 /*--------------------------------------------------------------

@@ -19,25 +19,41 @@ class Footer extends HTMLElement {
                         <div class="col-lg-2 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">About</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Events</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="#">Order Ticket Now</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="/index.html">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../about/about.html">About</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="../main-event/main-event.html">Main Event</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="https://ticket.tedxundip.org">Order Ticket Now</a></li>
                             </ul>
                         </div>
                         <div class="col-lg-3 col-md-6 footer-links">
-                            <h4>Contacts</h4>
-                            <p>
-                                Diponegoro University,
-                                Kota Semarang, Jawa Tengah 50275
-                                <br>
-                                Indonesia<br>
-                                <strong>Phone:</strong> +91 78092 19566<br>
-                                <strong>Email:</strong> <a
-                                    href="mailto:tedxundip3.0@gmail.com@gmail.com?subject=[[Your Subject]]&body=Email Using Body"
-                                    target="_blank">tedxundip3.0@gmail.com</a><br>
-                            </p>
+                        <h4>Contacts</h4>
+                        <p>
+                            Diponegoro University,
+                            Kota Semarang, Jawa Tengah 50275
+                            <br>
+                            Indonesia<br>
+                        <div>
+                            <div class="row">
+                                <div class="col-2">
+                                    <strong>Phone:</strong>
+                                </div>
+                                <div class="col">
+                                    <p><a href="tel:+6282157961859">Najla : +6282157961859</a></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-2">
+                                </div>
+                                <div class="col">
+                                    <p><a href="tel:+6281325496643">Rico : +6281325496643</a></p>
+                                </div>
+                            </div>
                         </div>
+                        <strong>Email:</strong> <a
+                            href="mailto:tedxundip3.0@gmail.com@gmail.com?subject=[[Your Subject]]&body=Email Using Body"
+                            target="_blank">&nbsp;&nbsp;&nbsp;tedxundip3.0@gmail.com</a><br>
+                        </p>
+                    </div>
                         <div class="col-lg-4 col-md-6 footer-newsletter">
                             <h4>Check Our Social Medias</h4>
                             <p>Get the latest information updates from our official account!</p>
@@ -59,7 +75,7 @@ class Footer extends HTMLElement {
                     operated under license from <strong><span style="color: #E62B1E">TED</span></strong>
                 </div>
                 <div class="credits">
-                    Designed by <a href="#"> Website Development TEDx UNDIP</a>
+                    Designed by <a href="#"> Website Development TEDxUNDIP</a>
                 </div>
             </div>
         </footer>`
